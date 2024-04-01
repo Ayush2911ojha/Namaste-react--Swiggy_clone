@@ -1,0 +1,521 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: Open Sans;
+  }
+  
+
+
+
+body {
+    width: 100vw;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+.card-container {
+    width: 190px;
+    /* height: 300px; */
+    /* border: 2px solid red; */
+    /* box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px; */
+    padding: 1rem;
+    background-color: rgb(255, 255, 255);
+    transition: all 0.3s;
+    border-radius: 20px;
+}
+
+.card-container:hover {
+
+    transform: scale(1.01);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+
+}
+
+.card-container-rest {
+    background-color: #fff;
+    border-radius: 2px;
+    width: 318px;
+    height: 320px;
+    padding: 1rem;
+    transition: all .3s;
+    position: relative;
+}
+
+.card-container-rest:hover {
+    transform: scale(1.01);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    border-radius: 20px;
+
+}
+
+.card-container-rest::before {
+    position: absolute;
+    content: attr(data-price);
+
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    bottom: 7.4rem;
+    left: 10%;
+    font-weight: 900;
+}
+.image-container {
+  position: relative;
+  display: inline-block; /* Ensures the container wraps around the image */
+}
+
+.add-to-cart-button {
+     color: #ffffff;
+    z-index: 1;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 4.5rem;
+    font-weight: 900;
+    position: absolute;
+    bottom: -18%;
+    left: 19%;
+    background-color: #b4b4b4;
+    width: 68px;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.3s linear;
+}
+.add-to-cart-button:hover{
+background-color: #646365;
+}
+
+.food-image {
+  /* Add any additional styles for your image here */
+}
+
+
+/* CSS */
+.radial-black-effect {
+    position: relative;
+}
+
+.radial-black-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 100%);
+}
+
+.widthSet {
+    width: 87%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.btn-filter {
+    color: gray;
+    border: none;
+    border-radius: 17px;
+    margin-top: 5rem;
+    margin-bottom: 0px;
+    margin-left: 1rem;
+    padding: 3px 31px;
+    font-size: 1.23rem;
+    font-weight: 600;
+    transition: all 0.3s ease 0s;
+    box-shadow: rgba(202, 194, 194, 0.45) 0px 11px 5px -5px;
+}
+
+.span-btn {
+    color: #cbcaca;
+    background-color: #646365;
+    border: none;
+    border-radius: 22px;
+    margin-top: 5rem;
+    margin-bottom: 0;
+    margin-left: 1rem;
+    padding: 3px 38px;
+    font-size: 1.29rem;
+    font-weight: 600;
+    transition: all .2s;
+}
+
+.btn-filter:hover {
+    color: rgb(77, 77, 77);
+   box-shadow: 0 11px 5px -5px #00000073;
+}
+
+
+
+
+
+.res-img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.restaurant-cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.sliderpic {
+    border-radius: 20px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 6px 50px;
+    overflow: hidden;
+    box-shadow: 0 15px 21px -22px #00000073;
+}
+
+.nav-link {
+    text-decoration: none;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0rem;
+    justify-content: left;
+    align-items: center;
+    width: 87%;
+    margin: 0 auto;
+    margin-bottom: 9rem;
+}
+
+.small-des {
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+}
+
+.rest-card {
+    object-fit: fill;
+    filter: brightness(70%) contrast(130%);
+
+    /* background:  radial-gradient(circle, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0) 70%); */
+    border-radius: 24px;
+    width: 294px;
+    height: 188px;
+    padding: 1px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+    /* position: rexxxxlative; */
+}
+
+
+.header {
+
+    width: 100%;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    padding: 0 60px;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    font-size: 1.01rem;
+    font-weight: 800;
+    height: 70px;
+    color: black;
+    cursor: pointer;
+
+}
+
+.header-img {
+    width: 100px;
+    /* height: 80px; */
+    position: absolute;
+    top: -8px;
+}
+
+.right-header>ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.right-header>ul>li {
+    padding: 1rem;
+}
+.right-header>ul>li>a {
+    color: #020202;
+    text-decoration: none;
+}
+
+.Search>input {
+    padding: 5px 15px;
+    font-size: .9rem;
+    border-radius: 6px;
+    border: 0.01px solid rgb(147, 147, 147);
+}
+
+.search-Btn {
+    color: #ffffff;
+    background-color: #ccabeb;
+    border: none;
+    border-radius: 9px;
+    font-size: 1rem;
+    padding: 7px 22px;
+    font-weight: 700;
+}
+
+.description {
+    color: rgb(99, 97, 97);
+    margin-bottom: 1rem;
+
+}
+
+.des-name {
+    color: black;
+    font-weight: 900;
+}
+
+.des-flex {
+    display: flex;
+    gap: 1rem;
+}
+
+.offer {
+    color: aliceblue;
+    text-transform: capitalize;
+    margin: 1rem;
+    padding: 1rem;
+    width: fit-content;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size: 1rem;
+    letter-spacing: 0.6rem;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    color: black;
+
+}
+
+.restaurant-heading {
+    /* margin: 6.6rem 8rem; */
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+    font-size: 1.7rem;
+    font-weight: 900;
+    color: rgb(0, 0, 0);
+    letter-spacing: 0.1rem;
+    /* text-align: center; */
+    width: 70%;
+    /* height: 400px; */
+    margin: 0 auto;
+}
+
+.rest-del-head {
+
+    width: 85%;
+}
+
+.btn-next {
+    font-size: 9rem;
+}
+
+
+section {
+    width: 100%;
+    display: inline-block;
+    background: #c5c3c3;
+    height: 50vh;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.footer-distributed {
+    background: #020202;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+    width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3 {
+    color: #ffffff;
+    font: normal 36px 'Open Sans', cursive;
+    margin: 0;
+}
+
+.footer-distributed h3 span {
+    color: lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    font-weight: 400;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+    color: #929292;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+    width: 35%;
+}
+
+.footer-distributed .footer-center i {
+    background-color: #2877a8;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    font-weight: 400;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+    color: rgb(137, 207, 204);
+    text-decoration: none;
+    ;
+}
+
+.footer-distributed .footer-links a:before {
+    content: "|";
+    font-weight: 300;
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+    content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+    width: 20%;
+}
+
+.footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #bfbbbb;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #9a9c9d;
+    border-radius: 2px;
+
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+    .footer-distributed {
+        font: bold 14px sans-serif;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .footer-distributed .footer-center i {
+        margin-left: 0;
+    }
+
+}
