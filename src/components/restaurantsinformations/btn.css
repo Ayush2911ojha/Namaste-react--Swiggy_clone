@@ -1,0 +1,28 @@
+.sliding-button {
+    position: relative;
+    width: 40px; /* Adjust the width as needed */
+    height: 20px; /* Adjust the height as needed */
+    background-color: #ccc; /* Adjust the background color */
+    border-radius: 20px; /* Half of the height to make it a circle */
+    cursor: pointer;
+  }
+  
+  .slider {
+    position: absolute;
+    top: 0%;
+    left: 24%;
+    transform: translate(-50%);
+    width: 20px; /* Adjust the width of the square */
+    height: 20px; /* Adjust the height of the square */
+    background-color: rgb(44, 168, 44); /* Adjust the background color of the square */
+    border-radius: 10px; /* Half of the width/height to make it a circle */
+    transition: transform 0.3s ease; /* Smooth transition effect */
+
+  }
+  
+  .active {
+    transform: translateX(50%);
+    background-color: #fff;
+  
+  }
+  

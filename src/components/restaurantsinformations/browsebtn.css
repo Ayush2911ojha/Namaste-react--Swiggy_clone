@@ -1,0 +1,25 @@
+
+
+.browseBtn{
+
+    position: fixed;
+   background-color: rgb(88, 88, 228);
+   padding: 0.5rem;
+   text-align: center;
+   width: 10rem;
+   color: white;
+   bottom: 2rem;
+   
+   border-radius: 20px;
+   transition: all 0.3s;
+
+
+
+    
+}
+.browseBtn:hover{
+
+    position: absolute;
+    transform: translateY(-100px);
+    bottom: 2rem;
+}
